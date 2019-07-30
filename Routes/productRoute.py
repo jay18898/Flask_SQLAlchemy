@@ -1,7 +1,7 @@
 from app import app
 from flask import request
-from Model.productModel import ProductModel
-from Schema.productSchema import ProductSchema,product_schema,products_schema
+from Models.productModel import ProductModel
+from Schemas.productSchema import ProductSchema,product_schema,products_schema
 from db import db
 # from Controller.productController import ProductController
 
