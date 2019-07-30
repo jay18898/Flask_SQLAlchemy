@@ -11,7 +11,6 @@ def Index():
 
 # Create a Product
 @app.route('/product', methods=['POST'])
-# ProductController.add_product(request)
 def add_product():
     print("Request",request)
     name = request.json['name']
@@ -27,7 +26,6 @@ def add_product():
 
 # Get All Products
 @app.route('/product', methods=['GET'])
-# ProductController.get_products()
 def get_products():
     print("Request",request)
     all_products = ProductModel.query.all()
@@ -36,7 +34,6 @@ def get_products():
 
 # Get Single Product
 @app.route('/product/<id>', methods=['GET'])
-# ProductController.get_product(id)
 def get_product(id):
     print("Request",request)
     product = ProductModel.query.get(id)
@@ -44,7 +41,6 @@ def get_product(id):
 
 # Update a Product
 @app.route('/product/<id>', methods=['PUT'])
-# ProductController.update_product(request,id)
 def update_product(id):
     print("Request",request)
     product = ProductModel.query.get(id)
@@ -60,7 +56,6 @@ def update_product(id):
 
 # Delete Product
 @app.route('/product/<id>', methods=['DELETE'])
-# ProductController.delete_product(id)
 def delete_product(id):
     print("Request",request)
     product = ProductModel.query.get(id)

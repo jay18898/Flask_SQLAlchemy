@@ -13,3 +13,5 @@ class ProductModel(db.Model):
         self.description = description
         self.price = price
         self.qty = qty
+        
+db.create_all()
